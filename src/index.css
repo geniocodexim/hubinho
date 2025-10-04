@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 28 100% 50%;
+    --primary-foreground: 0 0% 5%;
+    --secondary: 0 0% 75%;
+    --secondary-foreground: 0 0% 5%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 28 100% 65%;
+    --accent-foreground: 0 0% 5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 28 100% 50%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#0E0E0E] text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: "opsz" auto;
+  }
+}
+
+@layer utilities {
+  .glow-orange {
+    box-shadow: 0 0 20px rgba(255, 138, 0, 0.3), 0 0 40px rgba(255, 138, 0, 0.1);
+  }
+  
+  .glow-orange-strong {
+    box-shadow: 0 0 30px rgba(255, 138, 0, 0.5), 0 0 60px rgba(255, 138, 0, 0.2);
+  }
+  
+  .metallic-gradient {
+    background: linear-gradient(135deg, #BFC3C7 0%, #E6E8EB 50%, #BFC3C7 100%);
+  }
+  
+  .text-gradient-orange {
+    background: linear-gradient(135deg, #FF8A00 0%, #FFB84D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
